@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex h-[36px] cursor-pointer items-center justify-center rounded-md px-3 py-2 text-sm font-semibold shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:cursor-default;
+  }
+
+  .btn--primary {
+    @apply bg-blue-500 text-white hover:bg-blue-400 disabled:bg-blue-500/50 disabled:text-gray-400;
+  }
+
+  .btn--secondary {
+    @apply bg-white/10 text-white hover:bg-white/20 disabled:bg-white/5 disabled:text-gray-400;
+  }
+
+  .btn--icon {
+    @apply h-[36px] w-[36px] p-0;
+  }
+}
+
+.subgrid {
+  @apply grid grid-cols-3 grid-rows-3 border border-gray-200;
+}
+
+.cell-container {
+  @apply relative;
+  padding-bottom: 100%;
+}
+.cell-container:nth-of-type(3n) .cell {
+  @apply border-r-0;
+}
+.cell-container:nth-of-type(n + 7) .cell {
+  @apply border-b-0;
+}
+.cell-container::after {
+  content: attr(data-draft);
+  @apply absolute right-1 top-0 text-sm text-blue-400;
+}
+
+.cell {
+  @apply absolute inset-0 block cursor-pointer select-none rounded-none border-b border-r bg-white text-center text-lg text-blue-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300;
+  -moz-appearance: textfield;
+  caret-color: transparent;
+}
+.cell::-webkit-outer-spin-button,
+.cell::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cell.highlight-row,
+.cell.highlight-col,
+.cell.highlight-subgrid {
+  @apply bg-gray-50;
+}
+.cell.highlight-repeat {
+  @apply bg-blue-50;
+}
+.cell.highlight-selected {
+  @apply bg-blue-50;
+}
+.cell.highlight-conflict {
+  @apply bg-red-50 text-red-600;
+}
+.cell.initial {
+  @apply text-gray-600;
+}
+.cell:hover {
+  @apply bg-blue-50;
+}
+
+.card {
+  @apply rounded-md bg-gray-800 shadow-md;
+  box-shadow:
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.1),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.1),
+    0px 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
