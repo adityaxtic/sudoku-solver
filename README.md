@@ -2,7 +2,7 @@
 
 [![GitHub Pages](https://github.com/mwpryer/sudoku-solver/actions/workflows/static.yml/badge.svg)](https://github.com/mwpryer/sudoku-solver/actions/workflows/static.yml)
 
-This is a fully featured, playable Sudoku board and solver. It includes an interactive Sudoku board with cell highlighting, draft mode toggle, and undo and redo buttons. You have the option to solve the puzzle step by step or to solve the entire puzzle at once. Try it out [here](https://mwpryer.github.io/sudoku-solver/).
+This is a fully featured, playable Sudoku board and solver. It includes an interactive Sudoku board with cell highlighting, draft mode toggle, and undo and redo buttons. You have the option to solve the puzzle step by step or to solve the entire puzzle at once. 
 
 <div align="center">
     <img src="assets/screenshot.png" alt="Sudoku Solver" width="500">
